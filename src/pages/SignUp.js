@@ -1,44 +1,73 @@
-import React, {useState} from 'react'
+import React, { useContext, useState } from 'react'
+import { Redirect } from 'react-router-dom'
+import { AuthContext } from '../AuthService'
 import firebase from '../config/firebase'
 
-const SignUp = () => {
+const Signup = (history) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [name, setName] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        firebase.auth().createUserWithEmailAndPassword(email, password)
+        firebase.default.auth().createUserWithEmailAndPassword(email, password)
+            .then(() => {
+                history.pushState('/')
+            },({user}) => {
+                    user.updateProfile({
+                        displayName: name
+                })
+            })
             .catch(err => {
                 console.log(err)
             })
     }
 
+    const user = useContext(AuthContext)
+    if (user) {
+        return <Redirect to='/' />
+    }
+
     return (
-        <div>
-            <h1>Sign Up</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor='email'>E-mail</label>
-                    <input
-                        name='email'
-                        type='email'
-                        id='email'
-                        placeholdr='Email'
-                    />
-                </div>
-                <div>
-                    <label htmlFor='password'>Password</label>
-                    <input
-                        name='password'
-                        type='password'
-                        id='password'
-                        placeholder='Password'
-                    />
-                </div>
-                <button type='submit'>Sign Up</button>
+        <>
+            <form onSubmit={handleSubmit} className='route-form'>
+                    <div className='route-inner'>
+                        <h1 style={{margin:'unset'}}>SignUp</h1>
+                        <div>
+                            <input
+                                className='route-in'
+                                type='name'
+                                id='name'
+                                name='name'
+                                placeholder='name'
+                                onChange={e => setName(e.target.value)}
+                            />
+                        </div>
+                        <div>
+                            <input
+                                className='route-in'
+                                type='email'
+                                id='email'
+                                name='email'
+                                placeholder='Email'
+                                onChange={e => {setEmail(e.target.value)}}
+                            />
+                        </div>
+                        <div>
+                            <input
+                                className='route-in'
+                                type='password'
+                                id='password'
+                                name='password'
+                                placeholder='password'
+                                onChange={e => {setPassword(e.target.value)}}
+                            />
+                        </div>
+                        <button type='submit' className='route-button'>SignUp</button>
+                    </div>
             </form>
-        </div>
+        </>
     )
 }
 
-export default SignUp
+export default Signup

@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import Form from './Form'
 import List from './List'
 import shortid from 'shortid'
-import { Link } from 'react-router-dom';
 
 
 const ToDo = () => {
@@ -26,12 +25,6 @@ const ToDo = () => {
       <div>
         <h1>TODOリスト</h1>
         <br />
-        <div className="transition">
-            <Link to={`/room`}>room</Link>
-            <Link to={`/profile`}>profile</Link>
-            <Link to={`/Album`}>アルバム</Link>
-            <Link to={`/Recommended`}>おすすめ機能</Link>
-        </div>
         <br />
         <React.Fragment>
             <h2>目標</h2>
