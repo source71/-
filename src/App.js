@@ -7,12 +7,15 @@ import Room from './pages/Room'
 import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
+import './App.css'
+import firebase from './config/firebase'
 
 const App = () => {
     return (
         <div>
-            <header className='title'>55期卒業制作</header>
+            <header className='header'>55期卒業制作</header>
             <BrowserRouter>
+            <button className='logout' onClick={() => firebase.default.auth().signOut()}>Logout</button>
                 <div className="transition">
                     <Link to={`/Todo`}>TODOリスト</Link>
                     <Link to={`/room`}>room</Link>
@@ -30,6 +33,7 @@ const App = () => {
                     <Route exact path="/Album" component={Album} />
                 </Switch>
             </BrowserRouter>
+            <footer className='footer'><small>2021.6.6 卒業</small></footer>
         </div>
     )
 }

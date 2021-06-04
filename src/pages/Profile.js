@@ -47,7 +47,7 @@ const Profile = () => {
     return (
         <>
             <div className="wrap">
-                <h1>Profile</h1>
+                <h1 className='title'>Profile</h1>
                 <form className='profile' onSubmit={onSubmit}>
                     <img src={imageUrl} className='user-image' />
                     <input type="file" onChange={handleImage} />

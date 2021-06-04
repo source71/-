@@ -23,15 +23,13 @@ const ToDo = () => {
 
   return(  
       <div>
-        <h1>TODOリスト</h1>
-        <br />
-        <br />
+        <h1 className='title'>TODOリスト</h1>
         <React.Fragment>
-            <h2>目標</h2>
-            <br/>
             <h2 className="subtitle">reactの復習と面接の練習</h2>
-            <Form addTodo={addTodo} />
-            <List todos ={todos} deleteTodo={deleteTodo}/>
+            <div className='form'>
+                <Form addTodo={addTodo} />
+                <List todos ={todos} deleteTodo={deleteTodo}/>
+            </div>
         </React.Fragment>
       </div>
     )

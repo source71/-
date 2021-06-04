@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ReactPlayer from 'react-player';
-import './Recommended.css';
 // import firebase from './config/firebase';
 
 // メイン部分ここから
@@ -35,9 +34,9 @@ const handleSubmit = e => {
 }
 
   return(
-    <div>
+    <div className='wrap'>
       {/* タイトル名 */}
-      <h1>おすすめ機能</h1>
+      <h1 className='title'>おすすめ機能</h1>
       <br />
       {/* タブの大枠 */}
       <Tabs className="tabs">

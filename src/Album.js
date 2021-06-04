@@ -1,13 +1,12 @@
 // 各項目をインポート
 import React from 'react'
-import  './Album.css'
 
 // メインここから
 const Album = () => {
   return (
-    <div>
+    <div className='wrap'>
       {/* タイトル名　*/}
-      <h1>アルバム機能</h1>
+      <h1 className='title'>アルバム機能</h1>
       <br />
       {/* 寺崎のボックス */}
       <div className="box1">

@@ -27,7 +27,7 @@ const Login = (history) => {
         <>
             <form onSubmit={handleSubmit} className='route-form'>
                     <div className='route-inner'>
-                        <h1 style={{margin:'unset'}}>Login</h1>
+                        <h1 className='title'>Login</h1>
                         <div>
                             <input
                                 className='route-in'

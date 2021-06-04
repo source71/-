@@ -1,0 +1,406 @@
+/* resetcss */
+*, *:after, *:before {
+    box-sizing: border-box;
+  }
+  
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent; }
+  
+  body {
+    line-height: 1; }
+  
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block; }
+  
+  nav, ul, li {
+    list-style: none; }
+  
+  blockquote, q {
+    quotes: none; }
+  
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none; }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent; 
+    border-bottom: 1px solid black;
+}
+  
+  a:visited {
+    color: inherti;
+  }
+  
+  /* change colours to suit your needs */
+  ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none; }
+  
+  /* change colours to suit your needs */
+  mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold; }
+  
+  del {
+    text-decoration: line-through; }
+  
+  abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help; }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  
+  /* change border colour to suit your needs */
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0; }
+  
+  input, select {
+    vertical-align: middle; }
+  
+  /*# sourceMappingURL=reset.css.map */
+
+
+
+/* Alubum   */
+/* 共通 */
+.name {
+    color: #666;
+    font-size: 19px;
+    font-weight: bold
+  }
+  
+  /* 寺崎用スタイル */
+  .box1 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #4cd722;
+    border-radius: 8px;
+  }
+  .box1 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #4cd722;
+    font-weight: bold;
+  }
+  .box1 p {
+    margin: 0; 
+    padding: 0;
+  }
+  
+  .box1-1 {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background: #f4f4f4;
+    border-left: solid 6px #4cd722;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+  }
+  
+  /* 谷崎用スタイル */
+  .box2 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #f55240;
+    border-radius: 8px;
+  }
+  .box2 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #f55240;
+    font-weight: bold;
+  }
+  .box2 p {
+    margin: 0; 
+    padding: 0;
+  }
+  
+  .box2-2 {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background: #f4f4f4;
+    border-left: solid 6px #f55240;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+  }
+  
+  /* 小野寺用スタイル */
+  .box3 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #f7f023;
+    border-radius: 8px;
+  }
+  .box3 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #f7f023;
+    font-weight: bold;
+  }
+  .box3 p {
+    margin: 0; 
+    padding: 0;
+  }
+  .box3-3 {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background: #f4f4f4;
+    border-left: solid 6px #f7f023;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+  }
+
+
+  /* index */
+  .subtitle {
+    background-color: orange;
+    height: 5vh;
+    font-size: 5vh;
+    text-align: center;
+    width: 100vh;
+}
+
+/* main */
+.wrap {
+    width:100vh;
+    margin: auto;
+}
+
+.form {
+    height: 100vh;
+    padding: 1vw;
+    border: 1px solid pink;
+    border-radius: 10px;
+}
+
+.header {
+    font-size: 5vh;
+    text-align: center;
+    width: 100vh;
+    text-align:center;
+    margin: auto;
+    background-color: pink;
+}
+
+.footer {
+    font-size: 3vw;
+    text-align: center;
+    width: 100vh;
+    margin: auto;
+    background-color: pink;
+}
+
+.text-box {
+    position: fixed;
+    bottom: 8vw;
+    background-color: #ffb6c17a;
+    padding: 2vw;
+    border-radius: 10px;
+}
+
+.coment-box {
+    width: 75vh;
+    height: 5vw;
+    border: 1px solid pink;
+    border-radius: 10px
+}
+
+.route-in {
+    display: block;
+    height: 5vh;
+    width: 35vh;
+    border-radius: 5px; 
+    margin: 0 auto;
+}
+
+.route-button {
+    width: 35vh;
+    height: 5vw;
+    border-radius: 5px;
+    background-color: lightgreen
+}
+
+.route-form {
+    font-size: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffb6c17a;
+    width: 70vh;
+    margin: 5vw auto;
+    padding: 5vw;
+    height: 75vh;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.route-inner {
+    padding: 5vw;
+    border: 5px solid white;
+    border-radius: 10px;
+    height: 60vw;
+    width: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.profile {
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffb6c17a;
+    margin:5vw auto;
+    height: 75vh;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.user-image {
+    display: block;
+    margin-top: 10vh;
+    width: 30vh;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 100%;
+    background-color: gray;
+}
+
+.profile-form {
+    height: 100vh;
+    padding: 1vw;
+    border: 1px solid pink;
+    border-radius: 10px;
+}
+
+.profile-text {
+    position: fixed;
+    bottom: 8vw;
+    background-color: #ffb6c17a;
+    padding: 2vw;
+    border-radius: 10px;
+}
+
+.profile-coment {
+        width: 75vh;
+        height: 5vw;
+        border: 1px solid pink;
+        border-radius: 10px
+}
+
+/* recomend */
+/*タブのスタイル*/
+.tabs {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100vh;
+    height: 500px;
+    margin: 5vw auto;
+  }
+    
+  .tab_item {
+    width: 25%;
+    border: 3px solid rgba(179, 255, 187, 1);
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+
+.transition {
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 5vh;
+    background-color: pink;
+    width: 100vh;
+}
+
+.title {
+    font-size: 5vh;
+    margin-bottom: 3vh;
+}
+
+.logout {
+    background: #f1e767;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
+    background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
+    background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
+    width: 15vh;
+    padding: 2vh;
+    float: right;
+    margin: 2vh;
+    
+}
+
+.logout:hover {
+    background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
+    background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%);
+    background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
+
+}

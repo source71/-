@@ -23,7 +23,7 @@ const Room = () => {
         e.preventDefault()
         firebase.default.firestore().collection('messages').add({
             content: value,
-            user: user.displayName
+            // user: user.displayName
         })
         setValue('')
     }
@@ -31,8 +31,7 @@ const Room = () => {
     return (
         <>
             <div className='wrap'>
-                <button onClick={() => firebase.default.auth().signOut()}>Logout</button>
-                <h1>ChatRoom</h1>
+                <h1 className='title'>ChatRoom</h1>
                 <form onSubmit={handlesubmit} className='form'>
                     <ul>
                         {messages?.map((message) => {

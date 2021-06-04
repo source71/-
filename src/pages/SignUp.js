@@ -12,7 +12,7 @@ const Signup = (history) => {
         e.preventDefault()
         firebase.default.auth().createUserWithEmailAndPassword(email, password)
             .then(() => {
-                history.pushState('/')
+                history.pushState('/todo')
             },({user}) => {
                     user.updateProfile({
                         displayName: name
@@ -25,14 +25,14 @@ const Signup = (history) => {
 
     const user = useContext(AuthContext)
     if (user) {
-        return <Redirect to='/' />
+        return <Redirect to='/todo' />
     }
 
     return (
         <>
             <form onSubmit={handleSubmit} className='route-form'>
                     <div className='route-inner'>
-                        <h1 style={{margin:'unset'}}>SignUp</h1>
+                        <h1 className='title'>SignUp</h1>
                         <div>
                             <input
                                 className='route-in'
