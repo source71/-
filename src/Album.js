@@ -1,6 +1,5 @@
 // 各項目をインポート
 import React from 'react'
-import { Link } from 'react-router-dom'
 import  './Album.css'
 
 // メインここから
@@ -10,13 +9,6 @@ const Album = () => {
       {/* タイトル名　*/}
       <h1>アルバム機能</h1>
       <br />
-      {/* 各項目へのリンク */}
-      <div className="transition">
-        <Link to={`/`}>TODOリスト</Link>
-        <Link to={`/room`}>room</Link>
-        <Link to={`/profile`}>profile</Link>
-        <Link to={`/Recommended`}>おすすめ機能</Link>
-      </div>
       {/* 寺崎のボックス */}
       <div className="box1">
         <h2 className="name">寺崎 遼</h2>

@@ -1,6 +1,5 @@
 // reactインポート
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ReactPlayer from 'react-player';
 import './Recommended.css';
@@ -40,15 +39,6 @@ const handleSubmit = e => {
       {/* タイトル名 */}
       <h1>おすすめ機能</h1>
       <br />
-      {/* リンク先 */}
-      <div className="transition">
-        <Link to={`/`}>todoリスト</Link>
-        <Link to={`/room`}>room</Link>
-        <Link to={`/profile`}>profile</Link>
-        <Link to={`/Album`}>アルバム</Link>
-        <br />
-        <br />
-      </div>
       {/* タブの大枠 */}
       <Tabs className="tabs">
         <TabList>
