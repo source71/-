@@ -1,0 +1,104 @@
+/* 共通 */
+.name {
+  color: #666;
+  font-size: 19px;
+  font-weight: bold
+}
+
+/* 寺崎用スタイル */
+.box1 {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #4cd722;
+  border-radius: 8px;
+}
+.box1 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #4cd722;
+  font-weight: bold;
+}
+.box1 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.box1-1 {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background: #f4f4f4;
+  border-left: solid 6px #4cd722;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+
+/* 谷崎用スタイル */
+.box2 {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #f55240;
+  border-radius: 8px;
+}
+.box2 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #f55240;
+  font-weight: bold;
+}
+.box2 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.box2-2 {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background: #f4f4f4;
+  border-left: solid 6px #f55240;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+
+/* 小野寺用スタイル */
+.box3 {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #f7f023;
+  border-radius: 8px;
+}
+.box3 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #f7f023;
+  font-weight: bold;
+}
+.box3 p {
+  margin: 0; 
+  padding: 0;
+}
+.box3-3 {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background: #f4f4f4;
+  border-left: solid 6px #f7f023;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}

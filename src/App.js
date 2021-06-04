@@ -1,35 +1,21 @@
-import React, {useState} from 'react'
-import Form from './Form'
-import List from './List'
-import shortid from 'shortid'
-import Login from './pages/Login'
-import SignUp from './pages/SignUp'
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Todo from './ToDo'
+import Album from './Album'
+import Recommended from './Recommended'
 
 const App = () => {
-    const [todos, setTodos] = useState([])
-
-    const addTodo = content => {
-        setTodos([
-            ...todos,
-            {
-                content: content,
-                id: shortid.generate()
-            }
-        ])
-    }
-
-    const deleteTodo = id => {
-        setTodos(todos.filter(todo => todo.id !== id))
-    }
-
     return (
-        <>
-            <header className='title'>Todoリスト</header>
-            <h2>目標</h2><br/>
-            <h2 className="subtitle">reactの復習と面接の練習</h2>
-            <Form addTodo={addTodo} />
-            <List todos ={todos} deleteTodo={deleteTodo}/>
-        </>
+        <div>
+            <header className='title'>55期卒業制作</header>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/" component={Todo} />
+                    <Route exact path="/Recommended" component={Recommended} />
+                    <Route exact path="/Album" component={Album} />
+                </Switch>
+            </BrowserRouter>
+        </div>
     )
 }
 
