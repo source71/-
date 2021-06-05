@@ -22,7 +22,7 @@ const ToDo = () => {
   }
 
   return(  
-      <div>
+      <div className='wrap'>
         <h1 className='title'>TODOリスト</h1>
         <React.Fragment>
             <h2 className="subtitle">reactの復習と面接の練習</h2>
