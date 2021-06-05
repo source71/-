@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import firebase, {storage} from '../config/firebase'
-import Text from './Text'
 
 const Profile = () => {
     const [image, setImage] = useState('')
@@ -44,6 +43,33 @@ const Profile = () => {
             })
     }
 
+    //  テキストボックス内を定義
+    const [profile, setProfile] = useState([])
+    const [profileValue, setProfileValue] = useState('')
+    // firebaseからインスタンスを取得
+    useEffect(() => {
+    firebase.default.firestore().collection('coments')
+    .onSnapshot((snapshot) => {
+    const profileMessages = snapshot.docs.map(doc => {
+        return doc.data()
+    })
+    setProfile(profileMessages)
+    })
+    }, [])
+
+    // 挙動のキャンセルとアラート機能、テキストの追加
+    const handleSubmitProfile = e => {
+    e.preventDefault()
+    if ( profileValue ==='') {
+    alert('入力してください');
+    return false;
+    } else　{
+    } firebase.default.firestore().collection('coments').add({
+        coment: profileValue,
+    })
+    setProfileValue('')
+    } 
+
     return (
         <>
             <div className="wrap">
@@ -52,8 +78,22 @@ const Profile = () => {
                     <img src={imageUrl} className='user-image' />
                     <input type="file" onChange={handleImage} />
                     <button style={{margin:'unset'}}>Upload</button>
-                    <Text />
                 </form>
+                    <li>
+                        {profile.map((plofileMessage) => {
+                        return <li>{plofileMessage.coment}</li>;
+                      })}
+                    </li>
+                    <form onSubmit={handleSubmitProfile}>
+                        <input
+                            type='text'
+                            value={profileValue}
+                            onChange={e => {
+                                setProfileValue(e.target.value)
+                                }}
+                        />
+                        <button type="submit">送信</button>
+                    </form>
             </div>
         </>
     )
