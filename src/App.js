@@ -10,7 +10,6 @@ import Profile from './pages/Profile'
 import firebase from './config/firebase'
 import './App.css'
 import { AuthProvider } from './AuthService';
-import LoggedInRoute from './LoggedInRoute'
 
 const App = () => {
     return (
@@ -27,7 +26,7 @@ const App = () => {
                     </div>
                 <AuthProvider>
                     <Switch>
-                        <LoggedInRoute exact path="/" component={SignUp} />
+                        <Route exact path="/" component={SignUp} />
                         <Route exact path="/Todo" component={Todo} />
                         <Route exact path="/Login" component={Login} />
                         <Route exact path="/Room" component={Room} />
