@@ -72,28 +72,28 @@ const Profile = () => {
 
     return (
         <>
-            <div className="wrap">
+            <div className="wrap" style={{margin:'0 auto'}}>
                 <h1 className='title'>Profile</h1>
                 <form className='profile' onSubmit={onSubmit}>
                     <img src={imageUrl} className='user-image' />
                     <input type="file" onChange={handleImage} />
                     <button style={{margin:'unset'}}>Upload</button>
                 </form>
+                <form className='coment-box' onSubmit={handleSubmitProfile}>
                     <li>
                         {profile.map((plofileMessage) => {
                         return <li>{plofileMessage.coment}</li>;
                       })}
                     </li>
-                    <form onSubmit={handleSubmitProfile}>
-                        <input
-                            type='text'
-                            value={profileValue}
-                            onChange={e => {
-                                setProfileValue(e.target.value)
-                                }}
-                        />
-                        <button type="submit">送信</button>
-                    </form>
+                    <input
+                        type='text'
+                        value={profileValue}
+                        onChange={e => {
+                            setProfileValue(e.target.value)
+                            }}
+                    />
+                    <button type="submit">投稿</button>
+                </form>
             </div>
         </>
     )

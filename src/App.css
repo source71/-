@@ -255,8 +255,6 @@
 .coment-box {
     width: 75vh;
     height: 5vw;
-    border: 1px solid pink;
-    border-radius: 10px
 }
 
 .route-in {
@@ -300,19 +298,24 @@
     align-items: center;
     flex-direction: column;
     margin: auto;
-}
-
-.profile {
+  }
+  
+  .profile {
     font-size: 3vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #ffb6c17a;
-    margin:5vw auto;
-    height: 75vh;
-    border-radius: 5px;
     text-align: center;
-}
+  }
+  .coment-box {
+    background-color: #ffb6c17a;
+    width: 100vh;
+    height: 75vh;
+    margin-bottom: 2vw;
+    text-align: center;
+    padding-top: 20vh;
+  }
 
 .user-image {
     display: block;

@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
 
-const Login = (history) => {
+const Login = ({history}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -11,7 +11,7 @@ const Login = (history) => {
         e.preventDefault()
         firebase.default.auth().signInWithEmailAndPassword(email, password)
             .then (() => {
-                history.pushState("/")
+                history.push("/todo")
             })
             .catch(err => {
                 console.log(err)
@@ -20,7 +20,7 @@ const Login = (history) => {
         }
     const user = useContext(AuthContext)
     if (user) {
-        return <Redirect to="/" />
+        return <Redirect to="/todo" />
     }
 
     return (

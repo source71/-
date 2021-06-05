@@ -15,14 +15,14 @@ const Room = () => {
                 })
                 setMessages(messages)
             })
-    })
+    },[])
 
-    const user = useContext(AuthContext)
+    // const user = useContext(AuthContext)
 
     const handlesubmit = (e) => {
         e.preventDefault()
         firebase.default.firestore().collection('messages').add({
-            content: value,
+            content: value
             // user: user.displayName
         })
         setValue('')
@@ -32,22 +32,21 @@ const Room = () => {
         <>
             <div className='wrap'>
                 <h1 className='title'>ChatRoom</h1>
-                <form onSubmit={handlesubmit} className='form'>
-                    <ul>
-                        {messages?.map((message) => {
-                            return <li>{message.user}<br/>{message.content}</li>
-                        })}
-                    </ul>
-                    <div className='text-box'>
+                    <form onSubmit={handlesubmit} className='form'>
+                    <div>
                         <input
-                            className='coment-box'
                             type='text'
                             value={value}
                             onChange={e => {setValue(e.target.value)}}
-                        />
-                        <button type='submit' style={{height:'5vw'}}>送信</button>
+                            />
+                        <button type='submit'>送信</button>
                     </div>
-                </form>
+                    <ul>
+                        {messages?.map((message) => {
+                            return <li>{message.content}</li>
+                        })}
+                    </ul>
+                    </form>
             </div>
         </>
     )
