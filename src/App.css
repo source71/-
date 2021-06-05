@@ -104,7 +104,8 @@
     font-size: 19px;
     font-weight: bold
   }
-  
+
+
   /* 寺崎用スタイル */
   .box1 {
     position: relative;
@@ -357,7 +358,7 @@
     
   .tab_item {
     width: 25%;
-    border: 3px solid rgba(179, 255, 187, 1);
+    border: 3px solid rgba(0, 255, 208, 0.899);
     background-color: #d9d9d9;
     line-height: 50px;
     font-size: 16px;
@@ -372,6 +373,42 @@
     opacity: 0.75;
   }
 
+  .button {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
+    padding: 0 1em;
+    background: #00bcd4;
+    border-top: solid 3px #00a3d4;
+    border-bottom: solid 3px #00a3d4;
+    transition: .4s
+    }
+    
+    .button:hover {
+      text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83),
+      6px 0px 15px rgba(255, 255, 240, 0.83);
+    }
+  
+    .form-text {
+      height: 2em;
+      width: 25%;
+      padding: 0 16px;
+      border-radius: 4px;
+      border: none;
+      box-shadow: 0 0 0 1px #ccc inset;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    .form-text:focus {
+      outline: 0;
+      box-shadow: 0 0 0 2px rgb(238, 23, 98) inset;
+    }
+
+/* 共通部分 */
 .transition {
     margin: 5vh auto;
     display: flex;
