@@ -33,9 +33,8 @@ const Album = () => {
       <div className="box3">
         <h2 className="name">小野寺一樹</h2>
         <div className="box3-3">
-          <p>ここに文章を入れます
-            <br />ここに文章を入れます
-            <br />ここに文章を入れます
+          <p>CodeVillageでの授業を通して、プログラミングの基礎を始め多くのことを学ぶことができました。<br />
+          今後も継続してプログラミングの学習に励んでいきます。
           </p>
         </div>
       </div>
